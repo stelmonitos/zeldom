@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
-    res.render('home');
+    res.render('home' , { layout: 'home' });
 });
 app.get('/about', (req, res) => {
     res.render('about');
